@@ -25,4 +25,4 @@ public class Store {
         return flowers.stream().filter(flower -> flower.getFlowerType() == type).collect(Collectors.toList());
     }
 
-
+}
