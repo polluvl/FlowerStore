@@ -8,16 +8,17 @@ public class FlowerBucket {
     private List<FlowerPack> flowerPacks;
 
     // без параметрів щоб уникнути проблем
-    // <> означає що будуємо ліст на якомусь типі. тип на дженеріку. по дефолту - обджект
-    public FlowerBucket(){
+    // <> означає що будуємо ліст на якомусь типі. 
+    // тип на дженеріку. по дефолту - обджект
+    public FlowerBucket() {
         this.flowerPacks = new ArrayList<>();
     }
 
-    public void addFlowerPack(FlowerPack flowerPack){
+    public void add(FlowerPack flowerPack) {
         flowerPacks.add(flowerPack);
     }
 
-    public double getPrice(){
+    public double getPrice() {
         return flowerPacks.stream().mapToDouble(pack -> pack.getPrice()).sum();
     }
 }
